@@ -1,0 +1,60 @@
+using System;
+
+namespace Prime_Numbers
+{
+    class Program
+    {
+        //To be run in c#
+        static void Main(string[] args)
+        {
+            int startno, endno; //Initialising the variables for later use
+            string chce;
+            while (true)
+            {
+                Console.WriteLine("Please select your parameters. ");
+                Console.Write("Minimum Number: ");
+                startno = Convert.ToInt32(Console.ReadLine());      //Both of these variables are just setting the range for later use
+                Console.Write("Maximum Number: ");
+                endno = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(primis(startno, endno)); //call the function in with the two variables acting as the input information
+                Console.WriteLine("\n");
+                Console.Write("Would you like to select a different range? ");
+                chce = Console.ReadLine();
+                if (chce == "y")
+                    Console.Write("\n");
+                else
+                    break;
+            }
+        }
+        static int primis (int startno, int endno) //The int is to change the section of code into a function
+        {
+            int num, i, ctr, counter, sqc;      
+            int[] primearray = new int[endno]; //initialise the array and set a max limit to the array
+            counter = 0; //initialisation of 'counter' 
+            //counter is used for assigning a value into the array
+            for (num = startno; num <= endno; num++) //the loop will continue for however many nore numbers there are more in 
+            {
+                ctr = 0;
+                for (i = 2; i <= num / 2; i++) //The code below is for identifying what numbers in the range are prime, 
+                {
+                    if (num % i == 0) //The % command tests for a remainder when two numbers are divided (e.g. 2 % 5 = 1)
+                    {                 //if there is not a remainder then the number is not prime and should not be included onto the array
+                        ctr++; 
+                        break;
+                    }
+                }
+                if (ctr == 0 && num != 1) //If the number (num) did not have a remainder and was not prime 
+                {                         //then the 'ctr' was increased by 1 and will not be included onto the array due to the 'if' statement
+                    counter++; //this is the place in the array the prime number will be assigned
+                    primearray[counter] = num;
+                    Console.Write("{0} ", num); //This just produces a list of all the prime numbers
+                }
+            }
+            Console.Write("\n");
+            Console.WriteLine("What number in the sequence would you like?");
+            sqc = Convert.ToInt32(Console.ReadLine());
+            return primearray[sqc]; //returns the Prime number in the array that the user wishes
+
+        }
+    }
+}
