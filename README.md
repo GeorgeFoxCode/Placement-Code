@@ -1,6 +1,8 @@
 # Placement-Code
 This is a sample code that I wrote in my sparetime. The purpose was to help an issue I had during one of my assignments.
+
 THE ISSUE:
+
 For my Assignment I was using prime numbers consistently, but I didn't have them memorised.
 Therefore meaning that I had to look them up on the internet or write them down.
 The problem with these solutions is that they are both temporary - should I ever need to use prime numbers again I would need to find the 
