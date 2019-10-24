@@ -18,7 +18,7 @@ namespace Prime_Numbers
                 endno = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine(primis(startno, endno)); //call the function in with the two variables acting as the input information
                 Console.WriteLine("\n");
-                Console.Write("Would you like to select a different range? ");
+                Console.Write("Would you like to select a different range? (y/n)");
                 chce = Console.ReadLine();
                 if (chce == "y")
                     Console.Write("\n");
@@ -51,7 +51,7 @@ namespace Prime_Numbers
                 }
             }
             Console.Write("\n");
-            Console.WriteLine("What number in the sequence would you like?");
+            Console.WriteLine("What number in the sequence would you like? (e.g. 21st prime number in the sequence)");
             sqc = Convert.ToInt32(Console.ReadLine());
             return primearray[sqc]; //returns the Prime number in the array that the user wishes
 
