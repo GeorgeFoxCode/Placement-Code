@@ -12,6 +12,7 @@ One possible solution would be to memorise the first x amount needed - however t
 2) If I needed any prime larger than the ones memorised I would have to resort back to the first two solutions.
 
 MY SOLUTION:
+
 In order to solve ever issue in this problem I created a function that allows the user to input a range of numbers, and the program will
 find every prime number in between the two parameters. This solves ever issue because:
 1) The code is re-usable
